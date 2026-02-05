@@ -13,4 +13,6 @@ RUN wget -O /tmp/citizen.zip https://github.com/StarCitizenTools/mediawiki-skins
     rm /tmp/citizen.zip && \
     chown -R www-data:www-data /var/www/html/skins/Citizen
 
+COPY logo/ /var/www/html/resources/assets/    
+
 COPY LocalSettings.php /var/www/html/LocalSettings.php
