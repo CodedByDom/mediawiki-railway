@@ -148,6 +148,22 @@ $wgGroupPermissions['*']['read'] = false;
 $wgGroupPermissions['*']['edit'] = false;
 $wgGroupPermissions['*']['createaccount'] = false;
 
+# Disable anonymous editing and viewing
+$wgGroupPermissions['*']['edit'] = false;
+$wgGroupPermissions['*']['read'] = false;
+$wgGroupPermissions['*']['createaccount'] = false;
+
+# Regular users can only read and edit talk/discussion pages
+$wgGroupPermissions['user']['read'] = true;
+$wgGroupPermissions['user']['edit'] = false;
+$wgGroupPermissions['user']['createpage'] = false;
+$wgGroupPermissions['user']['createtalk'] = true;
+$wgGroupPermissions['user']['editmyusertalk'] = true;
+
+# Admins (sysop) can do everything
+$wgGroupPermissions['sysop']['edit'] = true;
+$wgGroupPermissions['sysop']['createpage'] = true;
+
 # End of automatically generated settings.
 # Add more configuration options below.
 
