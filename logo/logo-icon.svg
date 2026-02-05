@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+  <defs>
+    <linearGradient id="ocean" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0077b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#023e8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="25" cy="25" r="24" fill="url(#ocean)"/>
+  
+  <!-- Waves -->
+  <path d="M4 34 Q10 31 16 34 Q22 37 28 34 Q34 31 40 34 L46 34 L46 49 L4 49 Z" fill="#48cae4" opacity="0.4"/>
+  <path d="M4 37 Q10 34 16 37 Q22 40 28 37 Q34 34 40 37 L46 37 L46 49 L4 49 Z" fill="#90e0ef" opacity="0.5"/>
+  
+  <!-- Cruise ship -->
+  <g transform="translate(25, 22)">
+    <!-- Hull -->
+    <path d="M-14 7 L-12 11 L12 11 L14 7 L10 1 L-10 1 Z" fill="white"/>
+    <!-- Upper deck -->
+    <rect x="-8" y="-3" width="16" height="5" rx="1" fill="white"/>
+    <!-- Bridge -->
+    <rect x="-3" y="-7" width="8" height="5" rx="1" fill="white"/>
+    <!-- Funnel -->
+    <rect x="1" y="-11" width="3" height="5" fill="#ff6b6b"/>
+    <!-- Windows -->
+    <circle cx="-4" cy="-1" r="1" fill="#0077b6"/>
+    <circle cx="0" cy="-1" r="1" fill="#0077b6"/>
+    <circle cx="4" cy="-1" r="1" fill="#0077b6"/>
+  </g>
+  
+  <!-- Wireless signal -->
+  <path d="M34 13 Q38 13 38 17" stroke="rgba(255,255,255,0.7)" stroke-width="2" fill="none"/>
+  <path d="M36 9 Q42 9 42 15" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none"/>
+</svg>
