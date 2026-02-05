@@ -140,6 +140,13 @@ wfLoadSkin( 'MonoBook' );
 wfLoadSkin( 'Timeless' );
 wfLoadSkin( 'Vector' );
 
+# Disable anonymous editing
+$wgGroupPermissions['*']['edit'] = false;
+
+# Private wiki - login required to view
+$wgGroupPermissions['*']['read'] = false;
+$wgGroupPermissions['*']['edit'] = false;
+$wgGroupPermissions['*']['createaccount'] = false;
 
 # End of automatically generated settings.
 # Add more configuration options below.
