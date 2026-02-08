@@ -26,8 +26,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
-$wgSitename = "SBT Wiki New";
-$wgMetaNamespace = "SBT_Wiki_New";
+$wgSitename = "AudioTech Wiki";
+$wgMetaNamespace = "AudioTech Wiki";
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
@@ -62,11 +62,10 @@ $wgEnotifWatchlist = false; # UPO
 $wgEmailAuthentication = true;
 
 ## Database settings
-$wgDBtype = "mysql";
-$wgDBserver = "mysql.railway.internal";
-$wgDBname = "mediawiki";
-$wgDBuser = "wikiuser";
-$wgDBpassword = "SecurePass123";
+$wgDBserver = getenv('MYSQLHOST') ?: 'localhost';
+$wgDBname = getenv('MYSQLDATABASE') ?: 'mediawiki';
+$wgDBuser = getenv('MYSQLUSER') ?: 'root';
+$wgDBpassword = getenv('MYSQLPASSWORD') ?: '';
 
 # MySQL specific settings
 $wgDBprefix = "";
@@ -144,7 +143,7 @@ wfLoadSkin( 'Vector' );
 $wgGroupPermissions['*']['edit'] = false;
 
 # Private wiki - login required to view
-$wgGroupPermissions['*']['read'] = false;
+$wgGroupPermissions['*']['read'] = true;
 $wgGroupPermissions['*']['edit'] = false;
 $wgGroupPermissions['*']['createaccount'] = false;
 
