@@ -131,6 +131,10 @@ $wgDiff3 = "/usr/bin/diff3";
 ## names, e.g. 'vector' or 'monobook':
 $wgDefaultSkin = "vector-2022";
 
+# Enable mobile improvements
+$wgVectorResponsive = true;
+$wgDefaultMobileSkin = 'vector-2022';
+
 # Enabled skins.
 # The following skins were automatically enabled:
 wfLoadSkin( 'Citizen' );
