@@ -139,27 +139,17 @@ wfLoadSkin( 'MonoBook' );
 wfLoadSkin( 'Timeless' );
 wfLoadSkin( 'Vector' );
 
-# Disable anonymous editing
-$wgGroupPermissions['*']['edit'] = false;
-
-# Private wiki - login required to view
+# Anonymous users can read but not edit
 $wgGroupPermissions['*']['read'] = true;
 $wgGroupPermissions['*']['edit'] = false;
 $wgGroupPermissions['*']['createaccount'] = false;
 
-# Disable anonymous editing and viewing
-$wgGroupPermissions['*']['edit'] = false;
-$wgGroupPermissions['*']['read'] = false;
-$wgGroupPermissions['*']['createaccount'] = false;
-
-# Regular users can only read and edit talk/discussion pages
-$wgGroupPermissions['user']['read'] = true;
+# Regular users can read and edit talk pages only
 $wgGroupPermissions['user']['edit'] = false;
 $wgGroupPermissions['user']['createpage'] = false;
 $wgGroupPermissions['user']['createtalk'] = true;
-$wgGroupPermissions['user']['editmyusertalk'] = true;
 
-# Admins (sysop) can do everything
+# Admins can do everything
 $wgGroupPermissions['sysop']['edit'] = true;
 $wgGroupPermissions['sysop']['createpage'] = true;
 
