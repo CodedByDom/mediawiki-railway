@@ -37,7 +37,7 @@ $wgMetaNamespace = "AudioTech Wiki";
 $wgScriptPath = "";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "https://mediawiki-railway-production.up.railway.app";
+$wgServer = getenv('MW_SERVER') ?: 'http://localhost';
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
@@ -107,14 +107,14 @@ $wgLocaltimezone = "UTC";
 ## be publicly accessible from the web.
 #$wgCacheDirectory = "$IP/cache";
 
-$wgSecretKey = "94114efdcc94a548198c2648ec6f1bc7cc745d6158b9edd36da122bce64fe175";
+$wgSecretKey = getenv('MW_SECRET_KEY') ?: '';
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
 
 # Site upgrade key. Must be set to a string (default provided) to turn on the
 # web installer while LocalSettings.php is in place
-$wgUpgradeKey = "2af680f6c39d5051";
+$wgUpgradeKey = getenv('MW_UPGRADE_KEY') ?: '';
 
 ## For attaching licensing metadata to pages, and displaying an
 ## appropriate copyright notice / icon. GNU Free Documentation
@@ -129,7 +129,7 @@ $wgDiff3 = "/usr/bin/diff3";
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, e.g. 'vector' or 'monobook':
-$wgDefaultSkin = "Monobook";
+$wgDefaultSkin = "Vector";
 
 # Enabled skins.
 # The following skins were automatically enabled:
